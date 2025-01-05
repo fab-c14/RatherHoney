@@ -1,2 +1,0 @@
-# RatherHoney
-Honey Selling Website
