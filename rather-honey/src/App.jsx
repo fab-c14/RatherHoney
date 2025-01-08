@@ -4,16 +4,19 @@ import Header from "./components/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
+import HomeSection from "./components/Home";
+import FeaturesSection from "./components/Features";
+import ProductsSection from "./components/Products";
+import CategoriesSection from "./components/Categories";
 const App = () => {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/home" element={<div>Home Section</div>} />
-        <Route path="/features" element={<div>Features Section</div>} />
-        <Route path="/products" element={<div>Products Section</div>} />
-        <Route path="/categories" element={<div>Categories Section</div>} />
+        <Route path="/" element={<><Header/> <HomeSection /> <FeaturesSection /> <ProductsSection /><CategoriesSection/></>} />
+        <Route path="/home" element={<HomeSection />} />
+        <Route path="/features" element={<FeaturesSection/>} />
+        <Route path="/products" element={<ProductsSection/>} />
+        <Route path="/categories" element={<CategoriesSection/> } />
         <Route path="/review" element={<div>Review Section</div>} />
         <Route path="/blogs" element={<div>Blogs Section</div>} />
         <Route path="/checkout" element={<div>Checkout Page</div>} />
