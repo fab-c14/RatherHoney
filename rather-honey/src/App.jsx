@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
-import HomeSection from "./components/Home";
-import FeaturesSection from "./components/Features";
+import HomeSection from "./components/Home/Home";
+import FeaturesSection from "./components/Features/Features";
 import ProductsSection from "./components/Products";
 import CategoriesSection from "./components/Categories";
 import ReviewSection from './components/Reviews';
-import BlogSection from './components/Blogs';
+import BlogSection from './components/Blogs/Blogs';
 import Footer from "./components/Footer";
 const App = () => {
   return (

@@ -1,0 +1,28 @@
+/* Global styles for the HomeSection component */
+.home-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 3rem 0; /* Section padding */
+  }
+  
+  .home-section .content h3 {
+    font-size: 2.5rem; /* Larger headline */
+    color: #333; /* Dark gray for readability */
+    font-weight: 600;
+  }
+  
+  .home-section .content p {
+    font-size: 1.125rem; /* Slightly larger paragraph text */
+    color: #555; /* Softer gray for the paragraph */
+  }
+  
+  .shop-now-btn {
+    font-size: 1rem; /* Standard button size */
+    font-weight: 500; /* Medium font weight */
+    border: none; /* Remove default button border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .shop-now-btn:hover {
+    background-color: #e65c00; /* Slightly darker orange on hover */
+  }
+  

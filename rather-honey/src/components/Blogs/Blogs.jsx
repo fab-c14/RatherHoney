@@ -3,10 +3,10 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaUser, FaCalendar } from "react-icons/fa";
 
 // Import blog images
-import blog1 from "../assets/image/blog-1.jpg";
-import blog2 from "../assets/image/blog-2.jpg";
-import blog3 from "../assets/image/blog-3.jpg";
-
+import blog1 from "../../assets/image/blog-1.jpg";
+import blog2 from "../../assets/image/blog-2.jpg";
+import blog3 from "../../assets/image/blog-3.jpg";
+import './Blogs.css';
 const BlogSection = () => {
   const blogs = [
     {
@@ -47,7 +47,7 @@ const BlogSection = () => {
         <Row className="g-4">
           {blogs.map((blog, index) => (
             <Col md={4} key={index}>
-              <Card className="shadow-lg border-0">
+              <Card className="shadow-lg border-0 blog-card">
                 <Card.Img variant="top" src={blog.img} alt={blog.title} />
                 <Card.Body className="p-4">
                   <div className="flex justify-between text-sm text-gray-500 mb-3">
@@ -64,7 +64,7 @@ const BlogSection = () => {
                   <Card.Text className="text-gray-600">{blog.description}</Card.Text>
                   <a
                     href={blog.link}
-                    className="btn text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded"
+                    className="btn blog-btn text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded"
                   >
                     Read More
                   </a>

@@ -1,0 +1,74 @@
+/* Blog Section Styling */
+.blogs {
+    padding: 3rem 0;
+  }
+  
+  /* Blog Card Styling */
+  .blog-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 100%; /* Ensure all cards are equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Card Border Animation */
+  .blog-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--orange);
+    border-radius: 14px;
+    transform: scale(0); /* Initially hidden */
+    transition: transform 0.5s ease-in-out; /* Slow border animation */
+    pointer-events: none; /* Prevent it from interfering with other interactions */
+  }
+  
+  /* Hover Effect: Border Animation */
+  .blog-card:hover::before {
+    transform: scale(1); /* Expand border to fit the card */
+  }
+  
+  /* Card Image Styling */
+  .blog-card img {
+    object-fit: cover;
+    height: 200px;
+    transition: transform 0.3s ease; /* Zoom effect for image */
+  }
+  
+  /* Card Hover Image Effect */
+  .blog-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on image */
+  }
+  
+  /* Blog Button Styling */
+  .blog-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .blog-btn:hover {
+    background-color: #f97316; /* Darken on hover */
+    transform: translateY(-3px); /* Subtle lifting effect */
+  }
+  
+  /* Author and Date Text */
+  .blog-card .text-gray-500 {
+    color: #6b7280;
+  }
+  
+  /* Blog Title */
+  .blog-card .text-lg {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
