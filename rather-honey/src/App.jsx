@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import HomeSection from "./components/Home/Home";
 import FeaturesSection from "./components/Features/Features";
-import ProductsSection from "./components/Products";
+import ProductsSection from "./components/Products/Products";
 import CategoriesSection from "./components/Categories";
 import ReviewSection from './components/Reviews';
 import BlogSection from './components/Blogs/Blogs';
