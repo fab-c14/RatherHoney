@@ -39,7 +39,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="blogs" id="blogs">
+    <section className="blogs bg-light" id="blogs">
       <Container>
         <h1 className="heading text-center text-4xl font-bold mb-10">
           Our <span className="text-orange-500">Blogs</span>
