@@ -13,7 +13,7 @@ import product6 from "../../assets/image/product-6.png";
 import product7 from "../../assets/image/product-7.png";
 import product8 from "../../assets/image/product-8.png";
 
-// Import FontAwesome Icons
+
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import "./Products.css";
 
@@ -30,7 +30,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section className="products" id="products">
+    <section className="products py-5 bg-light" id="products">
       <Container>
         <h1 className="heading text-center text-4xl font-bold mb-10">
           Our <span className="text-orange-500">Products</span>
@@ -48,7 +48,7 @@ const ProductsSection = () => {
         >
           {products.map((product, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <Card className="product-card shadow-lg transition duration-300">
+              <Card className="product-card shadow-lg  bg-light transition duration-300">
                 <div className="card-inner-border relative">
                   <Card.Img
                     variant="top"

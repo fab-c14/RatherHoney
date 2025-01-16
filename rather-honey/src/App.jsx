@@ -7,10 +7,10 @@ import './App.css';
 import HomeSection from "./components/Home/Home";
 import FeaturesSection from "./components/Features/Features";
 import ProductsSection from "./components/Products/Products";
-import CategoriesSection from "./components/Categories";
-import ReviewSection from './components/Reviews';
+import CategoriesSection from "./components/Categories/Categories";
+import ReviewSection from './components/Reviews/Reviews';
 import BlogSection from './components/Blogs/Blogs';
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <Router>

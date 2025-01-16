@@ -1,0 +1,63 @@
+/* Footer Component Styles */
+.footer {
+    background-color: #f9fafb;
+  }
+  
+  .footer .box h3 {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer .box h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #f97316; /* Orange line under headings */
+  }
+  
+  .footer .share a {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer .share a:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer .links {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer .links:hover {
+    transform: translateX(5px);
+    color: #f97316; /* Orange */
+  }
+  
+  .footer .email {
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .footer .email:focus {
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  }
+  
+  .payment-img {
+    transition: transform 0.3s ease;
+  }
+  
+  .payment-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .footer .credit span {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .footer .credit span:hover {
+    text-decoration: underline;
+    color: #f97316; /* Orange */
+  }
+  

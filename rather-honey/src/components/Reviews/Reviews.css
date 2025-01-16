@@ -1,0 +1,39 @@
+/* Review Section Styling */
+.review-section {
+    background-color: #f9fafb;
+  }
+  
+  .review-card {
+    position: relative;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the card */
+  .review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Rounded image border effect */
+  .review-card img {
+    border-radius: 50%;
+    border: 4px solid #f97316; /* Orange border */
+    padding: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Scale image slightly on hover */
+  .review-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Star styling */
+  .stars i {
+    margin: 0 2px;
+    font-size: 1.2rem;
+  }
+  
