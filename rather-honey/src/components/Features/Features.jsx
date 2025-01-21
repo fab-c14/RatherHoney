@@ -5,7 +5,8 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import featureImg1 from "../../assets/image/feature-img-1.png";
 import featureImg2 from "../../assets/image/feature-img-2.png";
 import featureImg3 from "../../assets/image/feature-img-3.png";
-import "./Features.css";
+
+import './Features.css';
 
 const FeaturesSection = () => {
   const features = [
@@ -54,7 +55,7 @@ const FeaturesSection = () => {
                     <Card.Text className="text-gray-700">{feature.description}</Card.Text>
                     <button
                       href="#"
-                      className="btn bg-orange-500 text-black py-2 px-4 rounded-lg hover:text-white transition duration-300"
+                      className="bg-orange-500 text-black py-2 px-4 rounded-lg text-bold hover:text-white ring-4 ring-yellow-400 outline-none transition duration-300"
                     >
                       Read More
                     </button>

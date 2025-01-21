@@ -6,6 +6,7 @@ import honeyGif from "../../assets/image/honey.gif";
 import cartImg1 from "../../assets/image/cart-img-1.png";
 import cartImg2 from "../../assets/image/cart-img-2.png";
 import cartImg3 from "../../assets/image/cart-img-3.png";
+import './Header.css';
 
 const Header = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -68,15 +69,15 @@ const Header = () => {
           </Nav>
 
           {/* Icons */}
-          <div className="flex gap-4 items-center relative">
+          <div className="flex gap-3 items-center relative">
             <DropdownIcon onClick={toggleSearch}>
-              <FaSearch />
+              <FaSearch  className="bg-gray-200 rounded-lg p-1 hover:bg-orange-600" size={35}/>
             </DropdownIcon>
             <DropdownIcon onClick={toggleCart}>
-              <FaShoppingCart />
+              <FaShoppingCart className="bg-gray-200 rounded-lg p-1 hover:bg-orange-600" size={35}/>
             </DropdownIcon>
             <DropdownIcon onClick={toggleUserDropdown}>
-              <FaUser />
+              <FaUser className="bg-gray-200 rounded-lg p-1 hover:bg-orange-600" size={35}/>
             </DropdownIcon>
           </div>
         </Navbar.Collapse>
@@ -140,7 +141,7 @@ const Header = () => {
 const DropdownIcon = ({ children, onClick }) => (
   <div
     onClick={onClick}
-    className="text-2xl text-gray-900 cursor-pointer hover:text-orange-500 transition duration-300"
+    className="text-2xl text-gray-900 cursor-pointer hover:text-white"
   >
     {children}
   </div>
@@ -149,7 +150,7 @@ const DropdownIcon = ({ children, onClick }) => (
 // Dropdown Wrapper Component
 const DropdownWrapper = ({ children, position }) => (
   <div
-    className={`absolute top-[110%] ${position} bg-white p-5 rounded-lg shadow-lg transition-all duration-300 ease-in-out z-50`}
+    className={`absolute top-[110%] ${position} p-5 rounded-lg shadow-lg z-50 bg-gray-500`}
   >
     {children}
   </div>

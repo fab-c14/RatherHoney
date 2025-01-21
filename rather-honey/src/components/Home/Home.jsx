@@ -19,12 +19,12 @@ const HomeSection = () => {
                 Discover the finest selection of 100% natural and raw ingredients to bring you health and happiness.
               </p>
               {/* Button */}
-              <Button
+              <button
                 href="#"
-                className="shop-now-btn bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition duration-300"
+                className="shop-now-btn ring-4 ring-yellow-200 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition duration-300 b"
               >
                 Shop Now
-              </Button>
+              </button>
             </div>
           </Col>
 
