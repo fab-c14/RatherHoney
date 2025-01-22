@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 
 // Import images
 import product1 from "../../assets/image/product-1.png";
@@ -13,9 +15,7 @@ import product6 from "../../assets/image/product-6.png";
 import product7 from "../../assets/image/product-7.png";
 import product8 from "../../assets/image/product-8.png";
 
-
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import "./Products.css";
+import { FaStar, FaStarHalfAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const ProductsSection = () => {
   const products = [
@@ -35,52 +35,70 @@ const ProductsSection = () => {
         <h1 className="heading text-center text-4xl font-bold mb-10">
           Our <span className="text-orange-500">Products</span>
         </h1>
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-          }}
-          autoplay={true}
-          className="product-slider"
-        >
-          {products.map((product, index) => (
-            <SwiperSlide key={index} className="swiper-slide">
-              <Card className="product-card shadow-lg  bg-light transition duration-300">
-                <div className="card-inner-border relative">
-                  <Card.Img
-                    variant="top"
-                    src={product.img}
-                    alt={product.name}
-                    className="rounded-t-lg"
-                  />
-                  <Card.Body className="text-center flex flex-col justify-between space-y-3">
-                    <Card.Title className="text-xl font-semibold text-gray-900">
-                      {product.name}
-                    </Card.Title>
-                    <Card.Text className="price text-gray-700">
-                      {product.price}
-                    </Card.Text>
-                    <div className="stars text-yellow-500 flex justify-center space-x-1">
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStarHalfAlt />
-                    </div>
-                    <Button
-                      href="#"
-                      className="btn bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-black hover:text-white transition duration-300"
-                    >
-                      Add to Cart
-                    </Button>
-                  </Card.Body>
-                </div>
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="relative">
+          {/* Swiper Slider */}
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              1024: { slidesPerView: 4 },
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            modules={[Navigation, Autoplay]}
+            className="product-slider"
+          >
+            {products.map((product, index) => (
+              <SwiperSlide key={index} className="swiper-slide bg-light">
+                <Card className="product-card shadow-lg bg-light transition duration-300 hover:shadow-xl">
+                  <div className="card-inner-border relative">
+                    <Card.Img
+                      variant="top"
+                      src={product.img}
+                      alt={product.name}
+                      className="rounded-t-lg"
+                    />
+                    <Card.Body className="text-center flex flex-col justify-between space-y-3">
+                      <Card.Title className="text-xl font-semibold text-gray-900">
+                        {product.name}
+                      </Card.Title>
+                      <Card.Text className="price text-gray-700">
+                        {product.price}
+                      </Card.Text>
+                      <div className="stars text-yellow-500 flex justify-center space-x-1">
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStarHalfAlt />
+                      </div>
+                      <button
+                        className="text-black ring-2 ring-yellow-400 px-4 py-2 mt-2 font-bold rounded hover:bg-orange-600 transition duration-300 hover:translate-x-1 hover:translate-y-1"
+                      >
+                        Add to Cart
+                      </button>
+                    </Card.Body>
+                  </div>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Navigation Arrows */}
+          <div className="swiper-button-prev absolute top-1/2 left-0 transform -translate-y-1/2 text-3xl text-orange-500 hover:text-orange-600 cursor-pointer z-10">
+            <FaChevronLeft />
+          </div>
+          <div className="swiper-button-next absolute top-1/2 right-0 transform -translate-y-1/2 text-3xl text-orange-500 hover:text-orange-600 cursor-pointer z-10">
+            <FaChevronRight />
+          </div>
+        </div>
       </Container>
     </section>
   );

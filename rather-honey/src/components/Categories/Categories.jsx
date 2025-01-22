@@ -47,7 +47,7 @@ const CategoriesSection = () => {
                     </Card.Text>
                     <Button
                       href="#"
-                      className="btn bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-black hover:text-white transition duration-300"
+                     className="ring-2 ring-red-200 p-2 text-bold hover:ring-blue-200 hover:bg-yellow-200 font-bold rounded"
                     >
                       Shop Now
                     </Button>

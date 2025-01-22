@@ -23,7 +23,7 @@
   left: 20px;
   right: 20px;
   bottom: 20px;
-  border: 2px solid black; /* Black border */
+  border: 3px solid black; /* Black border */
   transition: all 0.3s ease-in-out; /* Smooth animation */
   z-index: -1; /* Place behind the card content */
 }
