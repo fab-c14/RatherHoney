@@ -21,7 +21,7 @@ const HomeSection = () => {
               {/* Button */}
               <button
                 href="#"
-                className="shop-now-btn ring-4 ring-yellow-200 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition duration-300 b"
+                className="shop-now-btn ring-4 ring-yellow-200 text-white py-2 px-4 rounded-lg hover:ring-white hover:bg-orange-500 transition duration-300 b"
               >
                 Shop Now
               </button>

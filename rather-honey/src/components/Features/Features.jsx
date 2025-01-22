@@ -55,7 +55,7 @@ const FeaturesSection = () => {
                     <Card.Text className="text-gray-700">{feature.description}</Card.Text>
                     <button
                       href="#"
-                      className="bg-orange-500 text-black py-2 px-4 rounded-lg text-bold hover:text-white ring-4 ring-yellow-400 outline-none transition duration-300"
+                      className="ring-2 ring-red-200 p-2 text-bold hover:ring-blue-200 hover:bg-yellow-200 font-bold rounded"
                     >
                       Read More
                     </button>
