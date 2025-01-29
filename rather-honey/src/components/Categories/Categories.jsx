@@ -24,33 +24,28 @@ const CategoriesSection = () => {
         </h1>
         <Row className="box-container justify-content-center">
           {categories.map((category, index) => (
-            <Col
-              key={index}
-              md={6}
-              lg={3}
-              className="mb-4 flex justify-center items-center"
-            >
-              <Card className="category-card shadow-lg h-full border-0 transition duration-300">
-                <div className="card-inner-border p-4 rounded-lg">
+            <Col key={index} md={6} lg={3} className="mb-4 flex justify-center">
+              <Card className="category-card shadow-lg h-full border-0 transition duration-300 hover:shadow-xl">
+                <div className="card-inner-border p-3 rounded-lg">
                   <Card.Img
                     variant="top"
                     src={category.img}
                     alt={category.name}
                     className="rounded-t-lg"
                   />
-                  <Card.Body className="text-center flex flex-col justify-between space-y-3">
-                    <Card.Title className="text-xl font-semibold text-gray-900">
+                  <Card.Body className="text-center flex flex-col justify-between space-y-2">
+                    <Card.Title className="text-lg font-semibold text-gray-900">
                       {category.name}
                     </Card.Title>
-                    <Card.Text className="text-gray-600">
+                    <Card.Text className="text-gray-600 text-sm">
                       {category.discount}
                     </Card.Text>
-                    <Button
+                    <button
                       href="#"
-                     className="ring-2 ring-red-200 p-2 text-bold hover:ring-blue-200 hover:bg-yellow-200 font-bold rounded"
+                      className="px-3 py-2 text-sm bg-orange-500 text-white font-medium rounded-md hover:bg-orange-800 transition duration-300 "
                     >
                       Shop Now
-                    </Button>
+                    </button>
                   </Card.Body>
                 </div>
               </Card>

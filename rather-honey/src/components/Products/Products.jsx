@@ -5,6 +5,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+
 // Import images
 import product1 from "../../assets/image/product-1.png";
 import product2 from "../../assets/image/product-2.png";
@@ -15,7 +16,8 @@ import product6 from "../../assets/image/product-6.png";
 import product7 from "../../assets/image/product-7.png";
 import product8 from "../../assets/image/product-8.png";
 
-import { FaStar, FaStarHalfAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { BsChevronDoubleRight, BsChevronDoubleLeft} from "react-icons/bs";
 
 const ProductsSection = () => {
   const products = [
@@ -58,7 +60,7 @@ const ProductsSection = () => {
           >
             {products.map((product, index) => (
               <SwiperSlide key={index} className="swiper-slide bg-light">
-                <Card className="product-card shadow-lg bg-light transition duration-300 hover:shadow-xl">
+                <Card className="product-card bg-light m-3 ring-2 ring-outline ring-green-400">
                   <div className="card-inner-border relative">
                     <Card.Img
                       variant="top"
@@ -92,11 +94,11 @@ const ProductsSection = () => {
           </Swiper>
 
           {/* Navigation Arrows */}
-          <div className="swiper-button-prev absolute top-1/2 left-0 transform -translate-y-1/2 text-3xl text-orange-500 hover:text-orange-600 cursor-pointer z-10">
-            <FaChevronLeft />
+          <div className="swiper-button-prev absolute ">
+            <BsChevronDoubleLeft/>
           </div>
-          <div className="swiper-button-next absolute top-1/2 right-0 transform -translate-y-1/2 text-3xl text-orange-500 hover:text-orange-600 cursor-pointer z-10">
-            <FaChevronRight />
+          <div className="swiper-button-next absolute ">
+           <BsChevronDoubleRight />
           </div>
         </div>
       </Container>
